@@ -40,6 +40,7 @@ class CNPJExtrator:
                 bairro = data['endereco']['bairro']
                 print(f"BAIRRO: [{bairro}] CNPJ:[{cnpjs}]\n")
                 lista_bairro.append(bairro)
+                # O site aceita apenas 20 requesições por minuto, logo há necessidade de um intervalo para que não haja erros durante o processamento.
                 sleep(4)
                 return bairro
 
